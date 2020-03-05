@@ -16,7 +16,6 @@ function poup() {
 	console.log(paciente);
 
 	var nome = form.nomes.value;
-	var nome = form.nome.value;
 	var peso = form.peso.value;
 	var altura = form.altura.value;
 	var gordura = form.gordura.value;
@@ -58,4 +57,16 @@ function poup() {
 
 }
 
+function GetDadosPacienteForm(form) {
+
 	var paciente = {
+		nome: form.nomes.value,
+		peso: form.peso.value,
+		altura: form.altura.value,
+		gordura: form.gordura.value,
+		imc: calcularImc(form.peso.value, form.altura.value)
+	}
+
+	return paciente;
+
+}
